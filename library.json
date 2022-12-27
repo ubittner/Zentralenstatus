@@ -1,0 +1,12 @@
+{
+    "id": "{E095D925-0603-3299-3534-EF11FC14E13E}",
+    "name": "Zentralenstatus",
+    "author": "Ulrich Bittner",
+    "url": "https://github.com/ubittner/Zentralenstatus",
+    "compatibility": {
+        "version": "6.1"
+    },
+    "version": "1.0",
+    "build": 1,
+    "date": 1666156199
+}
