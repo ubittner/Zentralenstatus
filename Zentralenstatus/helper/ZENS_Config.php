@@ -64,34 +64,6 @@ trait ZENS_Config
             ]
         ];
 
-        //Functions
-        $form['elements'][] = [
-            'type'    => 'ExpansionPanel',
-            'caption' => 'Funktionen',
-            'items'   => [
-                [
-                    'type'    => 'CheckBox',
-                    'name'    => 'EnableActive',
-                    'caption' => 'Aktiv (Schalter im WebFront)'
-                ],
-                [
-                    'type'    => 'CheckBox',
-                    'name'    => 'EnableStatus',
-                    'caption' => 'Status'
-                ],
-                [
-                    'type'    => 'CheckBox',
-                    'name'    => 'EnableAmountDeviceStatusUpdates',
-                    'caption' => 'Gerätestatusaktualisierungen'
-                ],
-                [
-                    'type'    => 'CheckBox',
-                    'name'    => 'EnableResetDeviceStatusUpdates',
-                    'caption' => 'Rückstellung'
-                ]
-            ]
-        ];
-
         $id = $this->ReadPropertyInteger('HomematicSocket');
         $enableButton = false;
         if ($id > 1 && @IPS_ObjectExists($id)) { //0 = main category, 1 = none
@@ -240,6 +212,45 @@ trait ZENS_Config
                             ]
                         ]
                     ]
+                ]
+            ]
+        ];
+
+        //Visualisation
+        $form['elements'][] = [
+            'type'    => 'ExpansionPanel',
+            'caption' => 'Visualisierung',
+            'items'   => [
+                [
+                    'type'    => 'Label',
+                    'caption' => 'WebFront',
+                    'bold'    => true,
+                    'italic'  => true
+                ],
+                [
+                    'type'    => 'Label',
+                    'caption' => 'Anzeigeoptionen',
+                    'italic'  => true
+                ],
+                [
+                    'type'    => 'CheckBox',
+                    'name'    => 'EnableActive',
+                    'caption' => 'Aktiv'
+                ],
+                [
+                    'type'    => 'CheckBox',
+                    'name'    => 'EnableStatus',
+                    'caption' => 'Status'
+                ],
+                [
+                    'type'    => 'CheckBox',
+                    'name'    => 'EnableAmountDeviceStatusUpdates',
+                    'caption' => 'Gerätestatusaktualisierungen'
+                ],
+                [
+                    'type'    => 'CheckBox',
+                    'name'    => 'EnableResetDeviceStatusUpdates',
+                    'caption' => 'Rückstellung'
                 ]
             ]
         ];
