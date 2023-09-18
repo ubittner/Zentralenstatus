@@ -23,9 +23,9 @@ class Zentralenstatus extends IPSModule
     use ZENS_Config;
 
     //Constants
-    private const MODULE_NAME = 'Zentralenstatus';
+    private const LIBRARY_GUID = '{E095D925-0603-3299-3534-EF11FC14E13E}';
+    private const MODULE_GUID = '{2ED87E59-10F7-2B7E-827E-70BB637E2856}';
     private const MODULE_PREFIX = 'ZENS';
-    private const MODULE_VERSION = '1.0-1, 19.10.2022';
     private const HOMEMATIC_SOCKET_GUID = '{A151ECE9-D733-4FB9-AA15-7F7DD10C58AF}';
     private const HOMEMATIC_DEVICE_GUID = '{EE4A81C6-5C90-4DB7-AD2F-F6BBD521412E}';
 
