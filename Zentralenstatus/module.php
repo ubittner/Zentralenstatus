@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @project       Zentralenstatus/Zentralenstatus
+ * @project       Zentralenstatus/Zentralenstatus/
  * @file          module.php
  * @author        Ulrich Bittner
- * @copyright     2022 Ulrich Bittner
+ * @copyright     2023 Ulrich Bittner
  * @license       https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0
  */
 
 /** @noinspection PhpExpressionResultUnusedInspection */
 /** @noinspection PhpUnhandledExceptionInspection */
-/** @noinspection DuplicatedCode */
+/** @noinspection SpellCheckingInspection */
 /** @noinspection PhpUnused */
 
 declare(strict_types=1);
@@ -20,7 +20,7 @@ include_once __DIR__ . '/helper/ZENS_autoload.php';
 class Zentralenstatus extends IPSModule
 {
     //Helper
-    use ZENS_Config;
+    use ZENS_ConfigurationForm;
 
     //Constants
     private const LIBRARY_GUID = '{E095D925-0603-3299-3534-EF11FC14E13E}';
@@ -38,6 +38,7 @@ class Zentralenstatus extends IPSModule
 
         //Info
         $this->RegisterPropertyString('Note', '');
+
         //Functions
         $this->RegisterPropertyBoolean('EnableActive', false);
         $this->RegisterPropertyBoolean('EnableStatus', true);
@@ -47,7 +48,7 @@ class Zentralenstatus extends IPSModule
         //Homematic socket
         $this->RegisterPropertyInteger('HomematicSocket', 0);
         $this->RegisterPropertyInteger('ReOpenTime', 60);
-        $this->RegisterPropertyBoolean('UseDeviceStatusUpdates', true);
+        $this->RegisterPropertyBoolean('UseDeviceStatusUpdates', false);
         $this->RegisterPropertyInteger('MaximumAmountDeviceStatusUpdates', 4);
         $this->RegisterPropertyString('Actions', '[]');
 
@@ -332,9 +333,8 @@ class Zentralenstatus extends IPSModule
     }
 
     /**
-     * Resets the amount of the device state updates at midnight.
-     *
      * @return void
+     * @throws Exception
      */
     public function ResetDeviceStatusUpdates(): void
     {
