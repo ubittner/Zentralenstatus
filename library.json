@@ -4,9 +4,9 @@
     "author": "Ulrich Bittner",
     "url": "https://github.com/ubittner/Zentralenstatus",
     "compatibility": {
-        "version": "6.1"
+        "version": "8.0"
     },
     "version": "1.0",
-    "build": 3,
-    "date": 1703666427
+    "build": 4,
+    "date": 1750782762
 }
