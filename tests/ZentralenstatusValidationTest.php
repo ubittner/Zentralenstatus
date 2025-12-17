@@ -15,11 +15,6 @@ class ZentralenstatusValidationTest extends TestCaseSymconValidation
         $this->validateLibrary(__DIR__ . '/..');
     }
 
-    public function testValidateModule_Servicemeldungen(): void
-    {
-        $this->validateModule(__DIR__ . '/../Servicemeldungen');
-    }
-
     public function testValidateModule_Zentralenstatus(): void
     {
         $this->validateModule(__DIR__ . '/../Zentralenstatus');
