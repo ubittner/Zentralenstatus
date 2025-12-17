@@ -27,7 +27,7 @@ trait configurationForm
         $this->UpdateFormField($Field, 'objectID', $ObjectID);
     }
 
-    public function UpdateSocketForm($SocketID): array
+    public function UpdateSocketForm(int $SocketID): array
     {
         $this->SendDebug(__FUNCTION__, 'SocketID: ' . $SocketID, 0);
         $visible = false;
